@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+    .main{
+      width: 100%;
+      background-image: url(food.jpg);
+      background-position: center;
+      background-size: cover;
+      animation: changeBackground 8s infinite;
+      
+    }
+    header{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+      color: whitesmoke;
+
+      position: fixed;
+      width: 100%;
+      background-color: rgb(0,0,0,0.5);
+      
+    }
+     .nav-links{
+      display: flex;
+      align-items: center;
+      animation: moveLeftToRight 1s ease-out forwards;
+      
+     }
+     .logo{
+      animation: moveLeftToRight 1s ease-out forwards;
+      font-family: sans-serif;
+      font-size: 20px;
+      font-weight: 900;
+     }
+     ul li{
+      list-style-type: none;
+     }
+     .drow-down-link{
+      position: relative;
+     }
+     .drop-down{
+      position: absolute;
+      display: none;
+     }
+     
+     .drow-down-link:hover .drop-down {
+      display: block;
+     }
+     .nav-links li a{
+      margin-right: 20px;
+      text-decoration: none;
+      color: whitesmoke;
+     }
+     .btn{
+      padding: 12px;
+      color: black;
+      border-radius: 30px;
+      border: 2px solid whitesmoke;
+     }
+    .section1{
+        padding-top: 180px;
+        padding-bottom: 150px;
+        display: flex;
+      }
+      .section1-child{
+         flex: 1;
+         padding: 20px;
+         color: whitesmoke;
+      }
+      .section1-child h1{
+        font-weight: 900;
+        font-size: 70px;
+        animation: slideUp 1s ease-out forwards;
+      }
+
+      @keyframes slideUp {
+          0% {
+               transform: translateY(50px);
+          }
+          100% {
+      
+                transform: translateY(0);
+       }
+       
+}
+      @keyframes moveLeftToRight {
+  0% {
+    transform: translateX(-100px);
+    
+  }
+  100% {
+    transform: translateX(0);
+    
+  }
+}
+@keyframes changeBackground {
+  0% { background-image: url("3-s.jpg"); }
+  33% { background-image: url("3-p.jpg"); }
+  66% { background-image: url("2-s.jpg"); }
+  100% { background-image: url("2-p.jpg"); }
+}
+
+      .section1 p{
+        font-family: serif;
+        margin-top: 5px;
+        animation: slideUp 1s ease-out forwards;
+      }
+      .section1-child button{
+         padding: 20px;
+         border: 1px solid whitesmoke;
+         border-radius: 30px;
+         margin-top: 20px;
+         margin-bottom: 20px;
+         transition: transform 0.3s ease;
+
+      }
+      .section1-child button:hover , .btn:hover{
+        background-color: rgb(250, 117, 0);
+        transform: translateY(-5px);
+      }
+      .section2{
+            padding: 40px;
+        }
+        .container-2pc{
+            display: flex;
+            border: 2px solid whitesmoke;
+            margin-bottom: 20px;
+            align-items: center;
+            border-radius: 20px;
+            flex-wrap: wrap;
+            transition: transform 0.3 ease;
+        }
+        .container-2pc:hover{
+          transform: skew(-2deg);
+        }
+        .container-2pc.shawarma {
+         flex-direction: row-reverse; /* Moves the image to the left and text to the right */
+          }
+
+        .child-2pc{
+            flex: 1;
+            padding: 20px;
+            flex-basis: 350px;
+        }
+        .img-design{
+            width: 100%;
+            overflow: hidden;
+            border-radius: 15px;
+        }
+        .child-2pc h2{
+            font-size: 50px;
+            font-weight: 900;
+            margin-bottom: 10px;
+        }
+        .child-2pc p{
+            font-family: sans-serif;
+        }
+        
+      .section2 h1{
+        margin-bottom: 20px;
+        font-family: sans-serif;
+        font-weight: 900;
+        font-size: 50px;
+        text-align: center;
+      }
+  </style>
+</head>
+<body>
+     <div class="main">
+           <header>
+
+            <div class="logo">Food Stall</div>
+            <div class="nav">
+
+              <ul class="nav-links">
+
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact US</a></li>
+                <li class="drow-down-link">
+                  <a href="#">Foods</a>
+                  <ul class="drop-down">
+                    <li><a href="#">Pizza</a></li>
+                    <li><a href="#">Burger</a></li>
+                    <li><a href="#">Shawarma</a></li>
+                  </ul>
+                </li>
+                <li><button class="btn">Order Now</button></li>
+              </ul>
+            </div>
+
+           </header>
+           
+           <section class="section1">
+             <div class="section1-child">
+              <h1>Welcome to Food Stall</h1>
+              <p>Serving delicious fast food made with love 
+                 and fresh ingredients — your hunger ends here!</p>
+                 <button>Explore More Now</button>
+                 <button>About Us</button>
+             </div>
+             <div class="section1-child">
+
+             </div>
+           </section>
+      </div>
+      
+        <section class="section2">
+            <h1>Explore Foods</h1>
+        <div class="container-2p">
+            <div class="container-2pc">
+                <div class="child-2pc">
+
+                    <h2>Burger</h2>
+                    <p>A burger is a classic comfort food, featuring a juicy patty nestled between soft buns. Topped with cheese, lettuce, tomato, and sauces, it’s a delicious handheld meal. Whether grilled, fried, or plant-based, burgers satisfy cravings with their rich flavors. Perfect with fries, they’re loved worldwide.</p>
+
+                </div>
+                <div class="child-2pc">
+                     <img src="1-b.jpg" class="img-design">
+                </div>
+                
+                
+            </div>
+            <div class="container-2pc shawarma">
+                <div class="child-2pc">
+
+                    <h2>Shawarma</h2>
+                    <p>Shawarma is a Middle Eastern delight, featuring marinated meat—chicken, beef, or lamb—slow-roasted on a vertical spit. Wrapped in warm pita with garlic sauce, pickles, and veggies, it’s a flavorful street food favorite. The smoky, juicy meat combined with fresh toppings makes shawarma an irresistible, satisfying meal.</p>
+
+                </div>
+                <div class="child-2pc">
+                     <img src="1-s.jpg" class="img-design">
+                </div>
+                
+            </div>
+
+            <div class="container-2pc">
+                <div class="child-2pc">
+
+                    <h2>Pizza</h2>
+                    <p>Pizza is a universally adored dish, featuring a crispy crust topped with tangy tomato sauce, melted cheese, and endless toppings. From pepperoni to veggies, every slice is a burst of flavor. Whether thin-crust or deep-dish, pizza is perfect for sharing, making it a go-to meal for any occasion.</p>
+
+                </div>
+                <div class="child-2pc">
+                     <img src="1-p.jpg" class="img-design">
+                </div>
+                
+            </div>
+        </div>
+    </section>
+</body>
+</html>
